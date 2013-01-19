@@ -1,4 +1,6 @@
 Techypreppy::Application.routes.draw do
+  resources :questions
+
   devise_for :users
 
   get "pages/home"

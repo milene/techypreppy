@@ -11,7 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130119175902) do
+ActiveRecord::Schema.define(:version => 20130119222932) do
+
+  create_table "questions", :force => true do |t|
+    t.text     "prompt"
+    t.text     "answer"
+    t.integer  "difficulty"
+    t.integer  "user_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "questions", ["user_id"], :name => "index_questions_on_user_id"
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
