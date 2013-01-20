@@ -1,67 +1,45 @@
-<head>
-	<style type="text/css">
+  	<header id="logohead">
+  		<%= image_tag "techylogo.png" %>
+  		<span class="headset">Settings</span><span class="straightbar">|</span>
+  		<span class="headset">Help</span><span class="straightbar">|</span>
+  		<span class="headset">Logout</span>
+  	</header>
 
-		.span8 {
-	  		width: 620px;
-		}
-		.span4 {
-	  		width: 300px;
-		}
-	
-	</style>
-</head>
-
-<body>
-	<div class="row">
-		<div class="span8">
-			<form>
-		  		<label id="tp_question">This is the question?</label>
-		  		<br>
-		  		<input type="text" placeholder="Type in your answer" id="tp_answer"/>
-		  		<br>
-		  		<label id="correct_answer" visible=""></label>
-		  		<br>
-		  		<input type="button" value = "Submit Answer"/>
-		  	</form>
-	  	</div>
-	  	<div class="span4">
-	    	<h4>See who else took tests</h4>
-			<div class="textarea">
-				<textarea id="demo">Text Area</textarea>
-			</div>
-	  	</div>
-	</div>
-
-	<script type="text/javascript">
-
-		// parse json tp_question 
-
-		var jsontext = '{"question":"What is the most popular javascript library?","answer":"jquery","difficulty":2}';
-		var json2obj = JSON.parse(jsontext);
-
-		document.getElementById("tp_question").innerHTML = json2obj.question;
-
-		// to retrieve tweets mentioning @techypreppy
-
-		function onLoad(json) {
-	  		var results = json.results;
-	  		document.getElementById('demo').innerHTML = results[0].text;
-		}
-
-		function fetchJSON(query) {
-	  		var script = document.createElement('script');
-	  		script.src = 'http://search.twitter.com/search.json?q=' + query + '&callback=onLoad';
-	  		document.getElementsByTagName('body')[0].appendChild(script);
-		}
-
-		fetchJSON('techypreppy');
-   
-	</script>
-
-</body>
-
-
-
+  	<div id="welcome">
+  		<span><img src="image"></span>
+  		<span><h1>Welcome, Name!</h1></span>
+  		<hr>
+  	</div>
+  		<%= image_tag "circle1.png" %>
+  	<div id="febox">
+  		<p><h2>Front End</h2></p>
+  		<p class="frontend"><a href="#">HTML</a></p>
+  		<p class="frontend"><a href="#">CSS</a></p>
+  		<p class="frontend"><a href="">JavaScript</a></p>
+  	</div>
+  		<%= image_tag "circle2.png" %>
+  	<div id="bebox">
+  		<p><h2>Back End</h2></p>
+  		<p class="backend"><a href="#">Algorithms</a></p>
+  		<p class="backend"><a href="#">Python</a></p>
+  		<p class="backend"><a href="">PHP</a></p>
+  	</div>
+  	<div id="devbox">
+  		<p><h2>Dev and Opps</h2></p>
+  		<p class="devops"><a href="#">Linux</a></p>
+  		<p class="devops"><a href="#">AWS</a></p>
+  	</div>
+  		<%= image_tag "circle3.png" %>
+  	<div id="tweetsbar">
+  		<p><h2>Live Tweets</h2></p>
+      <p id="spacefiller"></p>
+  	</div>
+  	<div id="cotags">
+  		<span class="comps">Google</span>
+  		<span class="comps">Yahoo!</span>
+  		<span class="comps">Coursera</span>
+  		<span class="comps">More...</span>
+  	</div>
 
 
 
