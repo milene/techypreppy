@@ -1,5 +1,11 @@
+@import "compass/css3/border-radius";
+
 img{
-	margin: 11% 0% 0% 4%;
+	margin: 4% 0% 0% 4%;
+}
+#home-image {
+	width: 960px;
+	margin: auto;
 }
 #red-border{
 	width: 97%;
@@ -16,16 +22,15 @@ img{
 	background: #fff;
 	width: 18%;
 	border: #F2EC99 3px solid;
-	border-radius: -moz-border-radius: 15px;
-	border-radius: 15px;
+	@include border-radius(15px);
 }
 #track{
 	margin-left: 6%;
 }
 footer{
-		background: #777;
-		padding: 1%;
-		padding-left: 28%;
+	background: #777;
+	padding: 1%;
+	padding-left: 28%;
 }
 #sitefoot{
 	font-family: 'coda', arial, san-serif;
