@@ -5,18 +5,17 @@
 
 
 #logohead{
-	background: #000;
 	padding: 1%;
 }
 #logo{
 	width: 19%;
-	background: #fff;
-	margin: 0% 59% 0% 0%;
+	margin: 0% 50% 0% 0%;
 	@include border-radius(15px);
 }
 .headset{
 	font-family: 'coda', arial, sans-serif;
-	color: #F2EC99;
+	color: #06BF7B;
+	font-size: 1.7em;
 	padding-right: 1%;
 }
 .straightbar{
@@ -54,7 +53,7 @@ hr{
 	display: inline-block;
 	width: 15%;
 	padding-left: 1%;
-	padding-bottom: 7%;
+	padding-bottom: 3%;
 	margin: 0% 0% 3% -8%;
 	background: #fff;
 	border: #06BF7B solid 10px;
@@ -155,6 +154,7 @@ hr{
 #tweetsbar h2{
 	font-family: 'PleasantlyPlumpNormal', 'coda', arial, sans-serif;
 	color: #044158;
+	background: #fff;
 	padding-bottom: 10%;
 	padding-left: 5%;
 }
@@ -173,7 +173,7 @@ hr{
 	padding: .5%;
 }
 #sitefoot{
-	background: #000;
+	background: #044158;
 	padding: 1%;
 	padding-left: 37%;
 }

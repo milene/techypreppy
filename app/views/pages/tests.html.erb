@@ -1,23 +1,12 @@
-  	<header id="logohead">
-  		<%= image_tag "techylogo.png" %>
-  		<span class="headset">Settings</span><span class="straightbar">|</span>
-  		<span class="headset">Help</span><span class="straightbar">|</span>
-  		<span class="headset">Logout</span>
-  	</header>
 
-  	<div id="welcome">
-  		<span><img src="image"></span>
-  		<span><h1>Welcome, Name!</h1></span>
-  		<hr>
-  	</div>
-  		<%= image_tag "circle1.png" %>
+  	<%= image_tag "circle1.png" %>
   	<div id="febox">
   		<p><h2>Front End</h2></p>
   		<p class="frontend"><a href="#">HTML</a></p>
   		<p class="frontend"><a href="#">CSS</a></p>
-  		<p class="frontend"><a href="">JavaScript</a></p>
+  		<p class="frontend"><%= link_to "JavaScript", pages_test_path %></p>
   	</div>
-  		<%= image_tag "circle2.png" %>
+  	<%= image_tag "circle2.png" %>
   	<div id="bebox">
   		<p><h2>Back End</h2></p>
   		<p class="backend"><a href="#">Algorithms</a></p>
@@ -29,10 +18,10 @@
   		<p class="devops"><a href="#">Linux</a></p>
   		<p class="devops"><a href="#">AWS</a></p>
   	</div>
-  		<%= image_tag "circle3.png" %>
+  	<%= image_tag "circle3.png" %>
   	<div id="tweetsbar">
   		<p><h2>Live Tweets</h2></p>
-      <p id="spacefiller"></p>
+      <p id="space"></p>
   	</div>
   	<div id="cotags">
   		<span class="comps">Google</span>

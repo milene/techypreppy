@@ -1,34 +1,21 @@
 <!-- Basic Needs -->
 <nav class="top-bar">
-  <ul>
-    <li class="name"><h1><%= link_to "TechyPreppy", root_path %></h1></li>
-  </ul>
-  <section>
-    <ul class="left">
-      <!-- Nothing for the moment -->
-    </ul>
+  
+  <header id="logohead">
+      <%= image_tag "techylogo.png" %>
 
-    <ul class="right">
-      <li class="divider"></li>
-      <li class="divider"></li>
-      <!--If user signed-in-->
-      <% if user_signed_in? %>
-        <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
-      <!--If user not signed-in-->
-      <% else %>
-        <li><%= link_to "Sign Up", new_user_registration_path %><li> 
-        <li class="divider"></li>
-        <li><%= link_to "Sign In", new_user_session_path %></li>
-      <% end %>
-    </ul>
-  </section>
+      <span class="headset">Welcome, Name!</span><span class="straightbar">|</span>
+      <span class="headset">Logout</span>
+      <hr>
+  </header>
+
 </nav>
 
 <nav> 
   <ul class="nav-bar">
     <li><%= link_to "Home", pages_home_path %></li>
-    <li><%= link_to "Tests", pages_tests_path %></a></li>
-    <li><%= link_to "Create a Test", pages_create_path %></li>
+    <li><%= link_to "Take a Test", pages_tests_path %></a></li>
+    <li><%= link_to "Submit a Test", pages_create_path %></li>
     <li><%= link_to "User Dashboard", pages_about_path %></li>
   </ul>
 </nav>
