@@ -1,7 +1,8 @@
 class User < ActiveRecord::Base
 
   has_many :questions
-  
+  has_many :attempts
+
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable and :omniauthable
