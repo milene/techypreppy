@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<script src="http://code.highcharts.com/highcharts.js"></script>
+<script src="http://code.highcharts.com/modules/exporting.js"></script>
+<script src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
+<div id="container" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
+<script>
+
+<html>
+<body>
+<h1>Graphing</h1>
+<p>
+$(function () {
+	
+	
+var time_penalty=100;
+var attempt_penalty=100;
+var sum=time_penalty+attempt_penalty;
+var correctness=100-sum;
+var raw_number;
+
+
+
+		   	raw_data =
+		        [{
+		            "id": 1,
+		                "question_id": 2,
+		                "answer": "prototype",
+		                "correct": true,
+		                "difficulty_rating": .1,
+		                "attempt_ms": 200000,
+		                "attempt_number": 3,
+		                "session": 123124
+		        }]
+
+				if (raw_data[0].correct=='true'){
+					 correct_final= 100;
+				}
+
+				if((attempt_ms>=6000 && attempt_ms < 240000) && (100-(attempt_ms*.0004166)>0)
+				{
+					var time_penalty=(attempt_ms*.0004166);
+					 raw_number=(100-time_penalty);
+					var i=1;
+					while (i <=attempt_number.length() && raw_number >= 0)
+					{
+						attempt_penalty=raw_number-25;
+						i++;
+					}
+				}
+		
+				//this establishes the penalties time and attempts so the mark down sum is never     //more than 100
+				sum = time_penalty+attempt_penalty;
+				
+				correctness=100-sum;
+
+		        final_data = [{
+
+					['correct', correctness],
+					['attempts', attempt_penalty],
+					['time', time_penalty]
+
+		        }];
+
+		        chart = new Highcharts.Chart({
+		            chart: {
+		                renderTo: 'container',
+		                plotBackgroundColor: null,
+		                plotBorderWidth: null,
+		                plotShadow: false
+		            },
+		            title: {
+		                text: 'Your Results'
+		            },
+		            tooltip: {
+		                pointFormat: '{series.name}: <b>{point.percentage}%</b>',
+		                percentageDecimals: 1
+		            },
+		            plotOptions: {
+		                pie: {
+		                    allowPointSelect: true,
+		                    cursor: 'pointer',
+		                    dataLabels: {
+		                        enabled: true,
+		                        color: '#000000',
+		                        connectorColor: '#000000',
+		                        formatter: function () {
+		                            return '<b>' + this.point.name + '</b>: ' + this.percentage + ' %';
+		                        }
+		                    }
+		                }
+		            },
+		            series: [{
+		                type: 'pie',
+		                name: 'User Score',
+		                data: final_data
+		            }]
+		        });
+		    });
+
+		});
+
+		</p>
+		</body>
+		</html>
+		</script>
