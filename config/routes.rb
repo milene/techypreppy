@@ -1,4 +1,10 @@
 Techypreppy::Application.routes.draw do
+  resources :companies
+
+  resources :categories
+
+  resources :attempts
+
   resources :questions
 
   devise_for :users

@@ -1,0 +1,58 @@
+$(function () {
+    var chart;
+    $(document).ready(function () {
+
+   	raw_data =
+        [{
+            "id": 1,
+                "question_id": 2,
+                "answer": "prototype",
+                "correct": false,
+                "difficulty_rating": .1,
+                "attempt_ms": 200000,
+                "attempt_number": 3,
+                "session": 123124
+        }]
+   
+    
+        final_data = [
+
+        ];
+
+        chart = new Highcharts.Chart({
+            chart: {
+                renderTo: 'container',
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false
+            },
+            title: {
+                text: 'Your Results'
+            },
+            tooltip: {
+                pointFormat: '{series.name}: <b>{point.percentage}%</b>',
+                percentageDecimals: 1
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: true,
+                        color: '#000000',
+                        connectorColor: '#000000',
+                        formatter: function () {
+                            return '<b>' + this.point.name + '</b>: ' + this.percentage + ' %';
+                        }
+                    }
+                }
+            },
+            series: [{
+                type: 'pie',
+                name: 'User Score',
+                data: data
+            }]
+        });
+    });
+
+});

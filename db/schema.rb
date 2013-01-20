@@ -11,7 +11,36 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130119222932) do
+ActiveRecord::Schema.define(:version => 20130120024726) do
+
+  create_table "attempts", :force => true do |t|
+    t.text     "answer"
+    t.boolean  "correct"
+    t.integer  "difficulty_rating"
+    t.integer  "attempt_ms"
+    t.integer  "attempt_number"
+    t.integer  "session"
+    t.integer  "user_id"
+    t.integer  "question_id"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+  end
+
+  add_index "attempts", ["question_id"], :name => "index_attempts_on_question_id"
+  add_index "attempts", ["user_id"], :name => "index_attempts_on_user_id"
+
+  create_table "categories", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "companies", :force => true do |t|
+    t.string   "name"
+    t.string   "location"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "questions", :force => true do |t|
     t.text     "prompt"
