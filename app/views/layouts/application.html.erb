@@ -22,6 +22,9 @@
 	<%= javascript_include_tag "application" %>
   
   <%= csrf_meta_tags %>
+
+  <link href='http://fonts.googleapis.com/css?family=Coda:400,800' rel='stylesheet' type='text/css'>
+
 </head>
 <body>
 	<%= render 'layouts/header' %>
@@ -37,5 +40,13 @@
  
 
   <%= yield %>
+
+    <footer id="sitefoot">
+  		<span class="footspace">Site Map</span>
+  		<span class="footspace">Contact Us</span>
+  		<span class="footspace">Tweet</span>
+  	</footer>
+  	<div id="blackfoot"></div>
+
 </body>
 </html>
