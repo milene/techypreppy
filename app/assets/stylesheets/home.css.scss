@@ -15,7 +15,7 @@ img{
 }
 .codatext{
 	display: inline-block;
-	margin: 9% 10% 0% 0%;
+	margin: 12% 8% 0% 0%;
 	font-family: 'coda', arial, san-serif;
 	font-size: 1.5em;
 	text-align: center;
@@ -25,7 +25,10 @@ img{
 	@include border-radius(15px);
 }
 #track{
-	margin-left: 6%;
+	margin-left: 11%;
+}
+#friends{
+	margin-left: 9%;
 }
 footer{
 	background: #777;
@@ -35,14 +38,10 @@ footer{
 #sitefoot{
 	font-family: 'coda', arial, san-serif;
 	color: #fff;
-	margin: 10% 0% 0% 0%;
+	margin: 0% 0% 0% 0%;
 
 }
 .footspace{
 	padding-right: 17%;
 
-}
-#blackfoot{
-	padding: 2%;
-	background: #000;
 }

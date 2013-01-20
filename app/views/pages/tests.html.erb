@@ -1,12 +1,12 @@
 
-  	<%= image_tag "circle1.png" %>
+  	<%= image_tag("circle1.png", :id => "c1") %>
   	<div id="febox">
   		<p><h2>Front End</h2></p>
   		<p class="frontend"><a href="#">HTML</a></p>
   		<p class="frontend"><a href="#">CSS</a></p>
   		<p class="frontend"><%= link_to "JavaScript", pages_test_path %></p>
   	</div>
-  	<%= image_tag "circle2.png" %>
+  	<%= image_tag("circle2.png", :id => "c2") %>
   	<div id="bebox">
   		<p><h2>Back End</h2></p>
   		<p class="backend"><a href="#">Algorithms</a></p>
@@ -18,15 +18,15 @@
   		<p class="devops"><a href="#">Linux</a></p>
   		<p class="devops"><a href="#">AWS</a></p>
   	</div>
-  	<%= image_tag "circle3.png" %>
+  	<%= image_tag("circle3.png", :id => "c3") %>
   	<div id="tweetsbar">
   		<p><h2>Live Tweets</h2></p>
       <p id="space"></p>
   	</div>
   	<div id="cotags">
-  		<span class="comps">Google</span>
-  		<span class="comps">Yahoo!</span>
-  		<span class="comps">Coursera</span>
+  		<span class="comps"><%= image_tag "google.png" %></span>
+  		<span class="comps"><%= image_tag "yahoo.png" %></span>
+  		<span class="comps"><%= image_tag "coursera.png" %></span>
   		<span class="comps">More...</span>
   	</div>
 
