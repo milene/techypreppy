@@ -1,0 +1,68 @@
+<head>
+	<style type="text/css">
+
+		.span8 {
+	  		width: 620px;
+		}
+		.span4 {
+	  		width: 300px;
+		}
+	
+	</style>
+</head>
+
+<body>
+	<div class="row">
+		<div class="span8">
+			<form>
+		  		<label id="tp_question">This is the question?</label>
+		  		<br>
+		  		<input type="text" placeholder="Type in your answer" id="tp_answer"/>
+		  		<br>
+		  		<label id="correct_answer" visible=""></label>
+		  		<br>
+		  		<input type="button" value = "Submit Answer"/>
+		  	</form>
+	  	</div>
+	  	<div class="span4">
+	    	<h4>See who else took tests</h4>
+			<div class="textarea">
+				<textarea id="demo">Text Area</textarea>
+			</div>
+	  	</div>
+	</div>
+
+	<script type="text/javascript">
+
+		// parse json tp_question 
+
+		var jsontext = '{"question":"What is the most popular javascript library?","answer":"jquery","difficulty":2}';
+		var json2obj = JSON.parse(jsontext);
+
+		document.getElementById("tp_question").innerHTML = json2obj.question;
+
+		// to retrieve tweets mentioning @techypreppy
+
+		function onLoad(json) {
+	  		var results = json.results;
+	  		document.getElementById('demo').innerHTML = results[0].text;
+		}
+
+		function fetchJSON(query) {
+	  		var script = document.createElement('script');
+	  		script.src = 'http://search.twitter.com/search.json?q=' + query + '&callback=onLoad';
+	  		document.getElementsByTagName('body')[0].appendChild(script);
+		}
+
+		fetchJSON('techypreppy');
+   
+	</script>
+
+</body>
+
+
+
+
+
+
+

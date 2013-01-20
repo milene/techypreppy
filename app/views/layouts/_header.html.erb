@@ -10,7 +10,6 @@
 
     <ul class="right">
       <li class="divider"></li>
-      <li><%= link_to "About", pages_about_path %></li>
       <li class="divider"></li>
       <!--If user signed-in-->
       <% if user_signed_in? %>
@@ -23,6 +22,15 @@
       <% end %>
     </ul>
   </section>
+</nav>
+
+<nav> 
+  <ul class="nav-bar">
+    <li><%= link_to "Home", pages_home_path %></li>
+    <li><%= link_to "Tests", pages_tests_path %></a></li>
+    <li><%= link_to "Create a Test", pages_create_path %></li>
+    <li><%= link_to "User Dashboard", pages_about_path %></li>
+  </ul>
 </nav>
 
 <!-- Positioning the Top Bar -->
