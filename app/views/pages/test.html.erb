@@ -1,1 +1,98 @@
-test.html.erb
+	<div class="row">
+		<div class="span8" style="margin: 20% 0% 20% 0%">
+			<form>
+				<br>
+		  		<label id="tp_question">This is the question?</label>
+		  		<br>
+		  		<input type="text" placeholder="Type in your answer" id="tp_answer" />
+		  		<br>
+		  		<div id="incorrect-answer" style="color: red; display: none;">
+		  			Sorry, wrong answer.
+		  		</div>	
+		  		<div id="correct-answer" style="color: green; display: none;">
+		  			Congrats! You got the right answer.
+		  		</div>	
+		  		<br>
+		  		<input type="button" value="Submit Answer" id="btn"/>
+		  		<br>
+		  	</form>
+	  	</div>
+	  	<div class="span4">
+			<div class="textarea">
+	    		<h6>Who else took tests?</h6>
+				<textarea id="demo">Text Area</textarea>
+			</div>
+	  	</div>
+	</div>
+
+	<script type="text/javascript">
+
+		var questions = [];
+		var currentQuestion = -1;  
+
+		$ .ajax({type: "GET",
+			url: "/questions",
+			dataType: "json",
+			success: function(data) {
+				questions = data;
+				showNextQuestion();
+			}
+		});
+
+		function showNextQuestion(){
+			currentQuestion++;
+			var question = questions[currentQuestion].prompt;
+			document.getElementById("tp_question").innerHTML = question;
+
+		}
+
+		$('#btn').click(function(){
+			var currentAnswer = questions[currentQuestion].answer;
+			console.log(currentAnswer);
+			console.log($("#tp_answer").val());
+			if (currentAnswer == $("#tp_answer").val() ){
+				console.log("right");
+				$("#correct-answer").show();
+				$("#incorrect-answer").hide();
+
+			}
+			else{
+				console.log("wrong");
+				$("#incorrect-answer").show();
+				$("#correct-answer").hide();
+
+			}				
+
+		});
+
+		// parse json tp_question 
+
+		//var jsontext = '{"question":"In JavaScript, What does \"1\"+2+4 evaluate to?","answer":"124","difficulty":2}';
+		//var json2obj = JSON.parse(jsontext);
+		//document.getElementById("tp_question").innerHTML = json2obj.question;
+
+		// check result entered by user
+
+		// to retrieve the latest tweet mentioning @techypreppy
+		function onLoad(json) {
+	  		var results = json.results;
+	  		document.getElementById('demo').innerHTML = results[0].text;
+		}
+
+		function fetchJSON(query) {
+	  		var script = document.createElement('script');
+	  		script.src = 'http://search.twitter.com/search.json?q=' + query + '&callback=onLoad';
+	  		document.getElementsByTagName('body')[0].appendChild(script);
+		}
+
+		fetchJSON('techypreppy');
+   
+	</script>
+
+
+
+
+
+
+
+

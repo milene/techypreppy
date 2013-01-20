@@ -4,12 +4,11 @@
 @include font-face("PleasantlyPlumpNormal", font-files('font/PLUMP-webfont.ttf', 'font/PLUMP-webfont.woff', 'font/PLUMP-webfont.eot') );
 
 
-#logohead{
-	padding: 1%;
-}
 #logo{
-	width: 19%;
-	margin: 0% 50% 0% 0%;
+	width: 23%;
+	padding-top: 1%;
+	padding-left: 2%;
+	margin: 0% 50% -1% 0%;
 	@include border-radius(15px);
 }
 .headset{
@@ -23,25 +22,10 @@
 	padding-right: 1%;
 	padding-left: 1%;
 }
-#welcome{
-	margin: 2% 0% 0% 2%;
-}
-#welcome h1{
-	display: inline-block;
-	font-family: 'coda', arial, sans-serif;
-	font-size: 2em;
-	font-weight: normal;
-	margin: 0%;
-	color: #044158;
-	padding-left: 1%;
-	padding-bottom: 1%; 
-}
 hr{
-	width: 97%;
+	width: 100%;
 	height: 8px;
 	background: #044158;
-	padding-left: 1%;
-	padding-right: 1%;
 }
 /* --------------------- front end ---------------- */
 #c1{
@@ -85,7 +69,7 @@ hr{
 	display: inline-block;
 	width: 15%;
 	padding-left: 1%;
-	padding-bottom: 7%;
+	padding-bottom: 3%;
 	background: #fff;
 	margin: 0% 0% 0% -13%;	
 	border: #044158 solid 10px;
@@ -112,10 +96,11 @@ hr{
 	margin: 0% 0% 0% -7%;
 }
 #devbox{
+	position: relative;
 	display: inline-block;
 	width: 15%;
 	padding-left: 1%;
-	padding-bottom: 7%;
+	padding-bottom: 3%;
 	background: #fff;
 	margin: 0% 2% 3% 7%;	
 	border: #F2C48D solid 10px;
@@ -141,7 +126,7 @@ hr{
 #devbox h2{
 	font-family: 'PleasantlyPlumpNormal', 'coda', arial, sans-serif;
 	color: #F2C48D;	
-	padding-bottom: 47%;
+	padding-bottom: 63%;
 }
 /* --------------------- tweet box ---------------- */
 
