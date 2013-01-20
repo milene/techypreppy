@@ -1,0 +1,185 @@
+@font-face {
+    font-family: 'PleasantlyPlumpNormal';
+    src: url('font/PLUMP-webfont.eot');
+    src: url('font/PLUMP-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/PLUMP-webfont.woff') format('woff'),
+         url('font/PLUMP-webfont.ttf') format('truetype'),
+         url('font/PLUMP-webfont.svg#PleasantlyPlumpNormal') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+#logohead{
+	padding: 1%;
+}
+#logo{
+	width: 19%;
+	margin: 0% 50% 0% 0%;
+	border-radius: -moz-border-radius: 15px;
+	border-radius: 15px;
+}
+.headset{
+	font-family: 'coda', arial, sans-serif;
+	color: #06BF7B;
+	font-size: 1.7em;
+	padding-right: 1%;
+}
+.straightbar{
+	color: #373737;
+	padding-right: 1%;
+	padding-left: 1%;
+}
+hr{
+	width: 97%;
+	height: 8px;
+	background: #044158;
+	padding-left: 1%;
+	padding-right: 1%;
+}
+/* --------------------- front end ---------------- */
+#c1{
+	width: 20%;
+	display: inline-block;
+	margin: 0% 0% 0% -10%;
+}
+#febox{
+	display: inline-block;
+	width: 15%;
+	padding-left: 1%;
+	padding-bottom: 3%;
+	margin: 0% 0% 3% -8%;
+	background: #fff;
+	border: #06BF7B solid 10px;
+	border-radius: -moz-border-radius: 15px;
+	border-radius: 15px;
+}
+#febox h2{
+	
+	color: #06BF7B;
+	font-family: 'PleasantlyPlumpNormal', 'coda', arial, sans-serif;
+	text-decoration: none;
+	padding-bottom: 36%;
+}
+.frontend a{
+	font-family: 'coda', arial, sans-serif;
+	font-size: 1.5em;
+	padding-left: 5%;
+	text-decoration: none;
+	text-align: center;
+	color: #000;
+}
+/* --------------------- back end ---------------- */
+
+#c2{
+	width: 20%;
+	display: inline-block;
+	margin: 0% 0% 0% 0%;
+}
+#bebox{
+	display: inline-block;
+	width: 15%;
+	padding-left: 1%;
+	padding-bottom: 3%;
+	background: #fff;
+	margin: 0% 0% 0% -13%;	
+	border: #044158 solid 10px;
+	border-radius: -moz-border-radius: 15px;
+	border-radius: 15px;
+}
+.backend a{
+	font-family: 'coda', arial, sans-serif;
+	font-size: 1.5em;
+	padding-left: 5%;
+	text-decoration: none;
+	color: #000;
+}
+#bebox h2{
+	font-family: 'PleasantlyPlumpNormal', 'coda', arial, sans-serif;
+	color: #044158;
+	padding-bottom: 36%;
+}
+/* --------------------- dev ops ---------------- */
+
+#c3{
+	width: 20%;
+	display: inline-block;
+	margin: 0% 0% 0% -7%;
+}
+#devbox{
+	display: inline-block;
+	position: relative;
+	width: 15%;
+	padding-left: 1%;
+	padding-bottom: 3%;
+	background: #fff;
+	margin: 0% 2% 3% 7%;	border: #F2C48D solid 10px;
+	border-radius: -moz-border-radius: 15px;
+	border-radius: 15px;
+}
+
+.devops{
+	font-family: 'PleasantlyPlumpNormal', 'coda', arial, sans-serif;
+	color: #06BF7B;
+}
+
+
+.devops a{
+	font-family: 'coda', arial, sans-serif;
+	font-size: 1.5em;
+	padding-left: 5%;
+	text-decoration: none;
+	color: #000;
+}
+
+
+#devbox h2{
+	font-family: 'PleasantlyPlumpNormal', 'coda', arial, sans-serif;
+	color: #F2C48D;	
+	padding-bottom: 47%;
+}
+/* --------------------- tweet box ---------------- */
+
+#tweetsbar{
+	width: 20%;
+	display: inline-block;
+	border-left: #044158 solid 10px;
+	margin: 0% 0% 0% -8%;
+}
+#tweetsbar h2{
+	font-family: 'PleasantlyPlumpNormal', 'coda', arial, sans-serif;
+	color: #044158;
+	background: #fff;
+	padding-bottom: 10%;
+	padding-left: 5%;
+}
+#spacefiller{
+	margin-bottom: 35%;
+}
+/* --------------------- footer links ---------------- */
+
+#cotags{
+	background: #777;
+	padding: 1%;
+}
+.comps{
+	font-family: 'coda', arial, sans-serif;
+	background: #fff;
+	padding: .5%;
+}
+#sitefoot{
+	background: #044158;
+	padding: 1%;
+	padding-left: 37%;
+}
+.footspace{
+	font-family: 'coda', arial, sans-serif;
+	color: #fff;
+	padding: 1%;
+	padding-right: 5%; 
+}
+
+
+
+
+
+
