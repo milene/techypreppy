@@ -1,0 +1,31 @@
+<!-- Basic Needs -->
+<nav class="top-bar">
+  <ul>
+    <li class="name"><h1><%= link_to "TechyPreppy", root_path %></h1></li>
+  </ul>
+  <section>
+    <ul class="left">
+      <!-- Nothing for the moment -->
+    </ul>
+
+    <ul class="right">
+      <li class="divider"></li>
+      <li><%= link_to "About", pages_about_path %></li>
+      <li class="divider"></li>
+      <!--If user signed-in-->
+      <% if user_signed_in? %>
+        <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
+      <!--If user not signed-in-->
+      <% else %>
+        <li><%= link_to "Sign Up", new_user_registration_path %><li> 
+        <li class="divider"></li>
+        <li><%= link_to "Sign In", new_user_session_path %></li>
+      <% end %>
+    </ul>
+  </section>
+</nav>
+
+<!-- Positioning the Top Bar -->
+<div class="fixed contain-to-grid">
+  <!-- <nav> goes here -->  
+</div>
