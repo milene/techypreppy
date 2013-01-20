@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  answer: MyText
+  correct: false
+  difficulty_rating: 1
+  attempt_ms: 1
+  attempt_number: 1
+  session: 1
+
+two:
+  answer: MyText
+  correct: false
+  difficulty_rating: 1
+  attempt_ms: 1
+  attempt_number: 1
+  session: 1
