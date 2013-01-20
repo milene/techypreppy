@@ -1,0 +1,26 @@
+<div class="row">
+	<div class="four columns centered">
+  <fieldset>
+
+    <legend>Sign up</legend>
+
+    <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+
+    	<%= devise_error_messages! %>
+	    <label><%= f.label :email %></label>
+	    <%= f.email_field :email %>
+
+	    <label><%= f.label :password %></label>
+	    <%= f.password_field :password %>
+
+	   	<label><%= f.label :password_confirmation %></label>
+	    <%= f.password_field :password_confirmation %>
+
+	  	<%= f.submit "Sign up" %>
+	<% end %>
+
+  </fieldset>
+
+  <%= render "devise/shared/links" %>
+  </div>
+</div>
