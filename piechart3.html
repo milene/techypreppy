@@ -1,13 +1,14 @@
 <!DOCTYPE html>
+<html>
+<head>
+<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
 <script src="http://code.highcharts.com/highcharts.js"></script>
 <script src="http://code.highcharts.com/modules/exporting.js"></script>
-<script src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
+</head>
+
+<body>
 <div id="container" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
 <script>
-<html>
-<body>
-<h1>Graphing</h1>
-<p>
 
 $(function () {
 
@@ -30,7 +31,7 @@ var raw_number=0;
 		        ]
 
 	var attempt_ms=(raw_data[5]);
-var attempt_number=(raw_data[6]);
+	var attempt_number=(raw_data[6]);
 
 				if((attempt_ms>=6000 && attempt_ms < 240000) && (100-(attempt_ms*.0004166)>0))
 				{
@@ -89,14 +90,8 @@ var attempt_number=(raw_data[6]);
                             ['attempts', attempt_penalty],
                             ['time', time_penalty]
 		          		]
-		        }); //the console has an issue with this paranthesis I don't know why
+		        }]}); //the console has an issue with this paranthesis I don't know why
 		 });
-
-	});
-	});
-	});
-
-		</p>
-		</body>
-		</html>
+		
 		</script>
+	</body>
