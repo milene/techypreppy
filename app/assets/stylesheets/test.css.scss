@@ -132,6 +132,8 @@ hr{
 
 #tweetsbar{
 	width: 20%;
+	position: absolute;
+	top: 24%;
 	display: inline-block;
 	border-left: #044158 solid 10px;
 	margin: 0% 0% 0% -8%;
@@ -140,7 +142,7 @@ hr{
 	font-family: 'PleasantlyPlumpNormal', 'coda', arial, sans-serif;
 	color: #044158;
 	background: #fff;
-	padding-bottom: 10%;
+	padding-bottom: 114%;
 	padding-left: 5%;
 }
 #spacefiller{
