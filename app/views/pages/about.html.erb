@@ -1,10 +1,103 @@
 <html>
 
-	<head>
-		User Dashboard
-	</head>
 
 	<body>
 	</body>
 
-</html>
+</html><!DOCTYPE html>
+<html>
+<head>
+<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
+<script src="http://code.highcharts.com/highcharts.js"></script>
+<script src="http://code.highcharts.com/modules/exporting.js"></script>
+</head>
+
+<body>
+<div id="container" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
+<script>
+
+$(function () {
+
+var time_penalty=55;
+var attempt_penalty=5;
+var sum=time_penalty+attempt_penalty;
+var correctness=40;
+var raw_number=0;
+
+   	raw_data =
+		        [
+		            ['id', 1],
+		            ['question_id', 2],
+		             [ 'answer', "prototype"],
+                     ['correct', true],
+		               [ 'difficulty_rating',.1],
+		                ['attempt_ms', 200000],
+		                ['attempt_number', 3],
+		                ['session', 123124]
+		        ]
+
+	var attempt_ms=(raw_data[5]);
+	var attempt_number=(raw_data[6]);
+
+				if((attempt_ms>=6000 && attempt_ms < 240000) && (100-(attempt_ms*.0004166)>0))
+				{
+					time_penalty=(attempt_ms*.0004166);
+					 raw_number=(100-time_penalty);
+					var i=1;
+					while (i <=attempt_number.length() && raw_number >= 0)
+					{
+						attempt_penalty=raw_number-25;
+						i++;
+					}
+				}
+		
+				//this establishes the penalties time and attempts so the mark down sum is never  
+    //more than 100
+				sum = time_penalty+attempt_penalty;
+				
+				correctness=100-sum;
+
+		       
+
+		        chart = new Highcharts.Chart({
+		            chart: {
+		                renderTo: 'container',
+		                plotBackgroundColor: null,
+		                plotBorderWidth: null,
+		                plotShadow: false
+		            },
+		            title: {
+		                text: 'Your Results'
+		            },
+		            tooltip: {
+		                pointFormat: '{series.name}: <b>{point.percentage}%</b>',
+		                percentageDecimals: 1
+		            },
+		            plotOptions: {
+		                pie: {
+		                    allowPointSelect: true,
+		                    cursor: 'pointer',
+		                    dataLabels: {
+		                        enabled: true,
+		                        color: '#000000',
+		                        connectorColor: '#000000',
+		                        formatter: function () {
+		                            return '<b>' + this.point.name + '</b>: ' + this.percentage.toFixed(2) + ' %';
+		                        }
+		                    }
+		                }
+		            },
+		            series: [{
+		                type: 'pie',
+		                name: 'User Score',
+		                data: 
+                    	[
+                            ['correct', correctness],
+                            ['attempts', attempt_penalty],
+                            ['time', time_penalty]
+		          		]
+		        }]}); //the console has an issue with this paranthesis I don't know why
+		 });
+		
+		</script>
+	</body>

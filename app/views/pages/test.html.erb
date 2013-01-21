@@ -1,8 +1,8 @@
 	<div class="row">
-		<div class="span8" style="margin: 20% 0% 20% 0%">
+		<div class="span8" style="margin: 10% 0% 10% 0%">
 			<form>
 				<br>
-		  		<label id="tp_question">This is the question?</label>
+		  		<label id="tp_question" style="font-size: 2em;">This is the question?</label>
 		  		<br>
 		  		<input type="text" placeholder="Type in your answer" id="tp_answer" />
 		  		<br>
@@ -13,16 +13,29 @@
 		  			Congrats! You got the right answer.
 		  		</div>	
 		  		<br>
-		  		<input type="button" value="Submit Answer" id="btn"/>
+		  		<a class="large button" id="btn" href="#">Submit Answer</a>
+
 		  		<br>
 		  	</form>
 	  	</div>
-	  	<div class="span4">
-			<div class="textarea">
-	    		<h6>Who else took tests?</h6>
-				<textarea id="demo">Text Area</textarea>
-			</div>
-	  	</div>
+
+<form>
+  <fieldset>
+
+    <legend>Who else took tests?</legend>
+
+    <label>Latest tweets</label>
+    <br>
+    <div id="demo">
+    </div>
+
+  </fieldset>
+</form>
+
+
+
+
+
 	</div>
 
 	<script type="text/javascript">
